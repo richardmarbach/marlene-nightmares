@@ -1,0 +1,47 @@
+div {
+  transform: translateY(-90px);
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+
+  background: #ff0000;
+
+  animation: falling 10s linear infinite;
+}
+
+div:nth-child(5n+5) {
+  animation-delay: 1.3s;
+}
+
+div:nth-child(3n+2) {
+  animation-delay: 1.5s;
+}
+
+div:nth-child(2n+5) {
+  animation-delay: 1.7s;
+}
+
+div:nth-child(3n+10) {
+  animation-delay: 2.7s;
+}
+
+div:nth-child(7n+2) {
+  animation-delay: 3.5s;
+}
+
+div:nth-child(4n+5) {
+  animation-delay: 5.5s;
+}
+
+div:nth-child(3n+7) {
+  animation-delay: 8s;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate(0, -80px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, calc(100vh + 80px)) rotate(360deg);
+  }
+}
